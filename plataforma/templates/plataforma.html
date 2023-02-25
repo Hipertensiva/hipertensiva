@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block 'head' %}
+<link rel="stylesheet" href="{% static 'plataforma/css/css.css' %}">
+<link rel="stylesheet" href="{% static 'plataforma/css/responsivo_pg_inicial.css' %}">
+{% endblock %}
+
+{% block 'titulo' %}Atlética Hipertensiva{% endblock %}
+
+{% block 'body' %}
+	{% if messages %}
+		{% for message in messages %}
+		<div class="alert {{message.tags}}">
+		{{message}}
+		</div>
+		{% endfor %}
+	{% endif %}
+
+	<!-- sidebar -->
+	<div class="sidebar">
+		<a style="text-decoration: none" href="{% url 'gerar_relatorios' %}">	
+	        <div  class="card-lateral">
+	            <img src="{% static 'plataforma/img/dados-projeto.png' %}">
+	                    <br>
+	                    <br>
+	                    <p>Gerar Relatórios</p>
+	        </div>
+		</a>
+		<a style="text-decoration: none;" href="{% url 'dados_associados_listar' %}">	
+	        <div class="card-lateral">
+	            <img src="{% static 'plataforma/img/dispositivos.png' %}">
+	                    <br>
+	                    <br>
+	                    <p>Gerenciar Associados</p>
+	        </div>
+		</a>
+		<a style="text-decoration: none" href="{% url 'add_associado' %}">
+	        <div  class="card-lateral">
+	            <img src="{% static 'plataforma/img/dados-usuario.png' %}">
+	                    <br>
+	                    <br>
+	                    <p>Adicionar Associado</p>
+	        </div>
+		</a>
+    </div>
+
+    <div class="conteudo">
+    	<h1 style="text-align: center" class="titulo">Selecione o que deseja:</h1>
+    	
+    </div>
+      
+	<div class="sair-btn">
+		<a style="width: 80%;" href="{% url 'sair' %}" class="btn btn-danger navbar-brand">SAIR</a>
+	</div>
+
+{% endblock %}
+
+
+
