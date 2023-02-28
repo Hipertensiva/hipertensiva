@@ -176,5 +176,5 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
-CSRF_TRUSTED_ORIGINS = ['https://hipertensiva.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://aaahipertensiva.up.railway.app']
 
